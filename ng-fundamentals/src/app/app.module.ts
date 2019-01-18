@@ -13,6 +13,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 import { appRoutes } from './routes';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ErrorsComponent } from './errors/errors.component';
+import {EventRouteActivator} from "./events/event-details/event-route-activator.service"
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { ErrorsComponent } from './errors/errors.component';
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [EventService, ToastrService],
+  providers: [EventService, ToastrService, EventRouteActivator],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
